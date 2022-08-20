@@ -5,7 +5,7 @@
       <mat-icon>house</mat-icon> Room
     </button>
     <mat-menu #roomOptions="matMenu">
-      <a mat-menu-item [routerLink]="'/create-room'"><mat-icon>add</mat-icon>Create Room</a>
+      <a mat-menu-item (click)="createRoomDialog();"><mat-icon>add</mat-icon>Create Room</a>
       <a mat-menu-item><mat-icon>list</mat-icon>Rooms List</a>
     </mat-menu>
   </mat-toolbar-row>
