@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { CreateRoomComponent } from 'src/room/create/create-room.component';
 
 @Component({
@@ -13,9 +13,9 @@ export class AppComponent {
 
   }
   createRoomDialog():void{
-    const dialogRef = this.dialog.open(CreateRoomComponent, {
-      
-    });
+    const dialogOptions= new MatDialogConfig();
+    dialogOptions.data={};  
+    const dialogRef = this.dialog.open(CreateRoomComponent,dialogOptions);
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
     });

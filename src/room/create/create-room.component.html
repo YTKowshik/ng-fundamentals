@@ -1,3 +1,8 @@
-<mat-toolbar color="secondary">
-    Create Room
+<mat-toolbar color="{{selectedValue}}" [ngClass.sm]="'sm-screen'">
+    <mat-toolbar-row fxFlex.sm="100">
+        <span fxFlex="80">Create Room </span>
+        <mat-select fxFlex="20" [(value)]="selectedValue" >
+            <mat-option *ngFor="let c of globalVars" [value]="c">{{c}}</mat-option>
+          </mat-select>
+    </mat-toolbar-row>
 </mat-toolbar>

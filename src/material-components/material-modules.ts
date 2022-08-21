@@ -4,12 +4,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule} from '@angular/material/icon';
 import { MatDialogModule} from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
     exports: [
         MatMenuModule,
         MatToolbarModule,
-        MatButtonModule,MatIconModule,MatDialogModule
+        MatButtonModule,MatIconModule,MatDialogModule,MatSelectModule
       ]
 })
 
